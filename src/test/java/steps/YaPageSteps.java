@@ -21,7 +21,8 @@ public class YaPageSteps {
 
     @Step
     public void findYaRuOleg(){
-
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://yandex.ru/");
     }
 
 
