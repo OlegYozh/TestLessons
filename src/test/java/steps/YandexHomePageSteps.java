@@ -48,12 +48,12 @@ public class YandexHomePageSteps {
         WebElement firstTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[1]/a/span/span"));
         WebElement secondTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[2]/a/span/span"));
         WebElement thirdTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[3]/a/span/span"));
-//        WebElement title = driver.findElement(By.xpath("//div[.=\"Публикации на основе ваших интересов\"]"));
+        WebElement title = driver.findElement(By.xpath("//*[.=\"Нефть\"]"));
 
         System.out.println(firstTopic.getText());
         System.out.println(secondTopic.getText());
         System.out.println(thirdTopic.getText());
         System.out.println();
-//        System.out.println(title.getText());
+        System.out.println(title.getText());
     }
 }
