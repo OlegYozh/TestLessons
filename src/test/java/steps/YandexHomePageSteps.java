@@ -37,20 +37,23 @@ public class YandexHomePageSteps {
         searchResult.click();
     }
 
-    @Step
+    @Step("Закрытие браузера")
     public void closePage() {
         driver.quit();
     }
 
+
     @Step
     public void getTitleOf3FirstNews() {
-        WebElement firstTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[1]/a"));
-        WebElement secondTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[2]/a"));
-        WebElement thirdTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[3]/a"));
+        WebElement firstTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[1]/a/span/span"));
+        WebElement secondTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[2]/a/span/span"));
+        WebElement thirdTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[3]/a/span/span"));
+//        WebElement title = driver.findElement(By.xpath("//div[.=\"Публикации на основе ваших интересов\"]"));
 
-        System.out.println(firstTopic.getAttribute("aria-label"));
-        System.out.println(secondTopic.getAttribute("aria-label"));
-        System.out.println(thirdTopic.getAttribute("aria-label"));
-
+        System.out.println(firstTopic.getText());
+        System.out.println(secondTopic.getText());
+        System.out.println(thirdTopic.getText());
+        System.out.println();
+//        System.out.println(title.getText());
     }
 }
