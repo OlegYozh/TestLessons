@@ -8,6 +8,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class YaPageSteps {
 
+    public YaPageSteps() {
+    }
+
+    public YaPageSteps(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    private WebDriver driver;
+
     @Step
     public void findYaRu(String searchBody){
         WebDriver driver = new ChromeDriver();

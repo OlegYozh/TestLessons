@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.sql.SQLOutput;
+
 public class YandexHomePageSteps {
     public YandexHomePageSteps() {
     }
@@ -38,5 +40,17 @@ public class YandexHomePageSteps {
     @Step
     public void closePage() {
         driver.quit();
+    }
+
+    @Step
+    public void getTitleOf3FirstNews() {
+        WebElement firstTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[1]/a"));
+        WebElement secondTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[2]/a"));
+        WebElement thirdTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[3]/a"));
+
+        System.out.println(firstTopic.getAttribute("aria-label"));
+        System.out.println(secondTopic.getAttribute("aria-label"));
+        System.out.println(thirdTopic.getAttribute("aria-label"));
+
     }
 }
