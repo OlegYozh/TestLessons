@@ -1,15 +1,14 @@
 package test;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import steps.YandexPageSteps;
+import steps.YandexHomePageSteps;
 
 public class JuliaTest {
+    WebDriver driver = new ChromeDriver();
 
-    private YandexPageSteps stepActor = new YandexPageSteps();
+    private YandexHomePageSteps stepActor = new YandexHomePageSteps(driver);
 
     @Test
     public void searchTest() {

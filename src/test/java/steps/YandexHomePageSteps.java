@@ -6,9 +6,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class YandexPageSteps {
+public class YandexHomePageSteps {
+    public YandexHomePageSteps() {
+    }
 
-    private WebDriver driver = new ChromeDriver();
+    public YandexHomePageSteps(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    private WebDriver driver;
 
     @Step
     public void initPage() {
