@@ -1,3 +1,5 @@
+package test;
+
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,7 +10,7 @@ public class Test1 {
 
     @Test
     public void test1_1(){
-        new YaPageSteps().findYaRu("ЧТо нибудь ищем");
+        new YaPageSteps().findYaRu("Новое из мение");
     }
 
 }
