@@ -18,4 +18,11 @@ public class MainTestSteps {
     public void closePage() {
         driver.quit();
     }
+
+
+
+    @Step("Инициализация страницы")
+    public void initPage(String url) {
+        driver.get(url);
+    }
 }
