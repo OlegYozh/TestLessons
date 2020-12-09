@@ -3,19 +3,21 @@ package test;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import steps.MainTestSteps;
 import steps.YandexHomePageSteps;
 
 public class JuliaTest {
     WebDriver driver = new ChromeDriver();
 
-    private YandexHomePageSteps stepActor = new YandexHomePageSteps(driver);
+    private YandexHomePageSteps yandexHomePageSteps = new YandexHomePageSteps(driver);
+    private MainTestSteps mainTestSteps = new MainTestSteps(driver);
 
     @Test
     public void searchTest() {
-        stepActor.initPage();
-        stepActor.findYandexMyself("Салимьянова Юлия Альбертовна");
-        stepActor.clickResult();
-        stepActor.closePage();
+        yandexHomePageSteps.initPage();
+        yandexHomePageSteps.findYandexMyself("Салимьянова Юлия Альбертовна");
+        yandexHomePageSteps.clickResult();
+        mainTestSteps.closePage();
     }
 
 }

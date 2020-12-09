@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.sql.SQLOutput;
 
 public class YandexHomePageSteps {
+
     public YandexHomePageSteps() {
     }
 
@@ -37,10 +38,7 @@ public class YandexHomePageSteps {
         searchResult.click();
     }
 
-    @Step("Закрытие браузера")
-    public void closePage() {
-        driver.quit();
-    }
+
 
 
     @Step
@@ -48,7 +46,7 @@ public class YandexHomePageSteps {
         WebElement firstTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[1]/a/span/span"));
         WebElement secondTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[2]/a/span/span"));
         WebElement thirdTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[3]/a/span/span"));
-        WebElement title = driver.findElement(By.xpath("//*[.=\"Нефть\"]"));
+        WebElement title = driver.findElement(By.xpath("//div[@aria-label=\"Дзен\"]/div[1]/div/div[1]/text()"));
 
         System.out.println(firstTopic.getText());
         System.out.println(secondTopic.getText());
