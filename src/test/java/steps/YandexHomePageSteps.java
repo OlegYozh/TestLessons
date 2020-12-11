@@ -19,10 +19,6 @@ public class YandexHomePageSteps {
 
     private WebDriver driver;
 
-    @Step
-    public void initPage() {
-        driver.get("https://yandex.ru/");
-    }
 
     @Step
     public void findYandexMyself(String query) {
