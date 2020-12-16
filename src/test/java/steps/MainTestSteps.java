@@ -19,8 +19,6 @@ public class MainTestSteps {
         driver.quit();
     }
 
-
-
     @Step("Инициализация страницы")
     public void initPage(String url) {
         driver.get(url);
