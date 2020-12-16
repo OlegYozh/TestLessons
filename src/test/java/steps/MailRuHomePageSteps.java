@@ -17,7 +17,6 @@ public class MailRuHomePageSteps {
     @Step
     public void login(){
         MailRuHomePage mailRuHomePage = new MailRuHomePage(driver);
-
         mailRuHomePage.loginField.sendKeys("login@mail.ru");
         mailRuHomePage.enterPasswordButton.click();
         mailRuHomePage.passwordField.sendKeys("password");

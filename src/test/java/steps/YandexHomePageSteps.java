@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.YandexRuHomePage;
 
 import java.sql.SQLOutput;
 
@@ -17,7 +18,9 @@ public class YandexHomePageSteps {
         this.driver = driver;
     }
 
+
     private WebDriver driver;
+
 
 
     @Step
@@ -35,8 +38,6 @@ public class YandexHomePageSteps {
     }
 
 
-
-
     @Step
     public void getTitleOf3FirstNews() {
         WebElement firstTopic = driver.findElement(By.xpath("//*[@id=\"news_panel_news\"]/ol[1]/li[1]/a/span/span"));
@@ -49,5 +50,18 @@ public class YandexHomePageSteps {
         System.out.println(thirdTopic.getText());
         System.out.println();
         System.out.println(title.getText());
+    }
+
+    @Step("Переход в маркет")
+    public void goToMarket() {
+        YandexRuHomePage yandexRuHomePage = new YandexRuHomePage(driver);
+        yandexRuHomePage.marketButton.click();
+    }
+
+    @Step("Поиск в яндексе")
+    public void search(String search){
+        YandexRuHomePage yandexRuHomePage = new YandexRuHomePage(driver);
+        yandexRuHomePage.searchString.sendKeys(search);
+        yandexRuHomePage.searchString.submit();
     }
 }
